@@ -7,7 +7,7 @@ Github，Gitee同步更新，Gitee仅作为下载仓库，提交Issue和Pull req
 
 [Github: https://github.com/taxue-alfred/GT911ForESP](https://github.com/taxue-alfred/GT911ForESP)
 
-[Gitee: https://gitee.com/MediaState/MediaStateT](https://gitee.com/MediaState/MediaStateT)
+[Gitee: https://gitee.com/TaXue_TianXing/GT911ForESP](https://gitee.com/TaXue_TianXing/GT911ForESP)
 
 ## 1. IDF 4.4 是否可用?
 
