@@ -86,7 +86,7 @@ void GT911_init(Alfred_GT911 * alfredGt911, int SDA, int SCL, int INT, int RES,
     i2c_driver_install(i2c_num, alfredGt911->gt911_i2c_config.mode, 0,
                        0, 0);
 
-    uint8_t buf[5] = {2, 0, 0, 0, 0};
+    uint8_t buf[5] = {0};
     GT911_read_regs(alfredGt911, GT911_PRODUCT_ID, buf, 4);
     printf("GT911 PRODUCT ID: %s\n", buf);
 }
