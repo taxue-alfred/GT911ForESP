@@ -4,6 +4,8 @@
 
 #define TOUCH_GT911_SDA 41
 #define TOUCH_GT911_SCL 42
+#define TOUCH_GT911_INT -1
+#define TOUCH_GT911_RES -1
 #define SCREEN_WIDTH 480
 #define SCREEN_HEIGHT 480
 
@@ -26,8 +28,10 @@ void GT911_test(void * pvPara)
 
 void app_main(void)
 {
-    GT911_init(&alfredGt911, TOUCH_GT911_SDA, TOUCH_GT911_SCL, -1, -1, I2C_NUM_0,
-               GT911_ADDR1, SCREEN_WIDTH, SCREEN_HEIGHT);
+    GT911_init(&alfredGt911, TOUCH_GT911_SDA, TOUCH_GT911_SCL, TOUCH_GT911_INT,
+               TOUCH_GT911_RES, I2C_NUM_0,GT911_ADDR1,
+               SCREEN_WIDTH, SCREEN_HEIGHT);
+    //初始化之后必须设置
     GT911_setRotation(&alfredGt911, ROTATION_NORMAL);
 
     xTaskCreate(GT911_test, "GT911_test", 1024 * 3,
