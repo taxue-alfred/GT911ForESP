@@ -2,8 +2,8 @@
 // Created by taxue on 2023/1/19.
 //
 
-#ifndef GT911FORESP_ALFRED_GT911_H
-#define GT911FORESP_ALFRED_GT911_H
+#ifndef GT911FORESP_Vernon_GT911_H
+#define GT911FORESP_Vernon_GT911_H
 
 #include "driver/i2c.h"
 #include "string.h"
@@ -157,21 +157,21 @@ typedef struct {
     uint16_t width;
     uint8_t rotation;
     TP_point_info points_info[TOUCH_POINT_TOTAL]; //用于存储五个触控点的坐标
-}Alfred_GT911;
+}Vernon_GT911;
 
 /**功能函数区**/
 
 //初始化函数
-void GT911_init(Alfred_GT911 * alfredGt911, int SDA, int SCL, int INT, int RES,
+void GT911_init(Vernon_GT911 * VernonGt911, int SDA, int SCL, int INT, int RES,
                 i2c_port_t i2c_num, uint8_t gt911_addr, uint16_t width, uint16_t height);
 
 //设置方向
-void GT911_setRotation(Alfred_GT911 * alfredGt911, uint8_t rot);
+void GT911_setRotation(Vernon_GT911 * VernonGt911, uint8_t rot);
 
 //检测是否被触摸并且获取相关值
-bool GT911_touched(Alfred_GT911 * alfredGt911);
+bool GT911_touched(Vernon_GT911 * VernonGt911);
 
 //获取触控点触碰位置
-void GT911_read_pos(Alfred_GT911 * alfredGt911, int *x, int *y, int index);
+void GT911_read_pos(Vernon_GT911 * VernonGt911, int *x, int *y, int index);
 
-#endif //GT911FORESP_ALFRED_GT911_H
+#endif //GT911FORESP_Vernon_GT911_H
