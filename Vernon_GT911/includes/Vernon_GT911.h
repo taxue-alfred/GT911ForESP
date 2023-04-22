@@ -162,7 +162,7 @@ typedef struct {
 /**功能函数区**/
 
 //初始化函数
-void GT911_init(Vernon_GT911 * VernonGt911, int SDA, int SCL, int INT, int RES,
+void GT911_init(Vernon_GT911 * VernonGt911, int8_t SDA, int8_t SCL, int8_t INT, int8_t RES,
                 i2c_port_t i2c_num, uint8_t gt911_addr, uint16_t width, uint16_t height);
 
 //设置方向
@@ -172,6 +172,6 @@ void GT911_setRotation(Vernon_GT911 * VernonGt911, uint8_t rot);
 bool GT911_touched(Vernon_GT911 * VernonGt911);
 
 //获取触控点触碰位置
-void GT911_read_pos(Vernon_GT911 * VernonGt911, int *x, int *y, int index);
+void GT911_read_pos(Vernon_GT911 * VernonGt911, uint16_t *x, uint16_t *y, uint8_t index);
 
 #endif //GT911FORESP_Vernon_GT911_H

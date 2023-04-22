@@ -66,7 +66,7 @@ int GT911_read_regs(Vernon_GT911 * VernonGt911, uint16_t reg, uint8_t *data, uin
  * @param width 屏幕宽度
  * @param height 屏幕高度
  */
-void GT911_init(Vernon_GT911 * VernonGt911, int SDA, int SCL, int INT, int RES,
+void GT911_init(Vernon_GT911 * VernonGt911, int8_t SDA, int8_t SCL, int8_t INT, int8_t RES,
                 i2c_port_t i2c_num, uint8_t gt911_addr, uint16_t width, uint16_t height)
 {
     VernonGt911->gt911_i2c_config.mode = I2C_MODE_MASTER;
@@ -170,7 +170,7 @@ bool GT911_touched(Vernon_GT911 * VernonGt911)
  * @param y 被修改的y值
  * @param index 触控点下标 [0-4]
  */
-void GT911_read_pos(Vernon_GT911 * VernonGt911, int *x, int *y, int index)
+void GT911_read_pos(Vernon_GT911 * VernonGt911, uint16_t *x, uint16_t *y, uint8_t index)
 {
     *x = VernonGt911->points_info[index].x;
     *y = VernonGt911->points_info[index].y;
