@@ -131,7 +131,7 @@ bool GT911_touched(Vernon_GT911 * VernonGt911)
             //旋转方向
             uint16_t temp;
             switch (VernonGt911->rotation){
-                case ROTATION_NORMAL:
+                case ROTATION_INVERTED:
                     VernonGt911->points_info[i].x = VernonGt911->width - VernonGt911->points_info[i].x;
                     VernonGt911->points_info[i].y = VernonGt911->height - VernonGt911->points_info[i].y;
                     break;
@@ -140,7 +140,7 @@ bool GT911_touched(Vernon_GT911 * VernonGt911)
                     VernonGt911->points_info[i].x = VernonGt911->width - VernonGt911->points_info[i].y;
                     VernonGt911->points_info[i].y = temp;
                     break;
-                case ROTATION_INVERTED:
+                case ROTATION_NORMAL:
                     VernonGt911->points_info[i].x = VernonGt911->points_info[i].x;
                     VernonGt911->points_info[i].y = VernonGt911->points_info[i].y;
                     break;
